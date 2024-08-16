@@ -1,0 +1,2994 @@
+:root {
+   --primary: #c74233;
+   --primary-dark: #863128;
+   --white: #ffff;
+   --background: #0c0503;
+   --grey: #B0B0B0;
+   --grey-2: #19100D;
+   --grey3: #7A7A7A;
+   --black: #000000;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+body {
+    font-family: 'roboto', sans-serif;
+    font-style: normal;
+    background-color: var(--background);
+    color: var(--white); 
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px; 
+}
+
+h3 {
+    font-size: 24px; 
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 14px; 
+}
+
+/* ============================================HEADER============================================= */
+header {
+    margin-bottom: 50px;
+}
+
+.header {
+    background-image: url(/assets/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    z-index: 5;
+    padding-top: 30px;
+}
+
+.header .sidebar {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(199, 66, 51, 1);
+    width: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.header .sidebar .sign-in {
+    display: none;
+}
+
+
+.header .sidebar li {
+    width: 100%;
+    list-style: none;
+    padding: 20px;
+}
+
+.header .sidebar li a {
+    color: var(--white);
+    margin: 10px 0 50px 20px;
+    position: relative;
+}
+
+.header .sidebar li a:active {
+    color: var(--grey3);
+    text-decoration: none;
+}
+
+
+.header .sidebar .uil-multiply {
+    margin: 10px 10px 0 auto;
+    font-size: 25px;
+    color: var(--white);
+}
+
+.header .sidebar .user-profile  {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--primary-dark);
+    padding: 3px;
+    margin-left: 40px;
+}
+
+.header .sidebar .user-profile a{
+    margin: 0 0 0 0;
+
+}
+
+.header .sidebar .user-profile img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.header .navigation .uil-bars {
+    font-size: 25px;
+    color: var(--primary);
+    display: none;
+}
+
+.header-contents {
+    padding: 0 100px 0 100px;
+}
+
+
+.header .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(12, 5, 3, 1));
+    z-index: -1;
+    pointer-events: none; 
+}
+
+.header .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ .header .navigation .logo a {
+    font-size: 40px;
+    font-family: serif;
+    color: var(--primary);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+ .header .searchbar {
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--white);
+    border-radius: 5px;
+    gap: 5px;
+    padding: 5px;
+}
+
+.header datalist option {
+    background: red;
+}
+
+ .header .searchbar input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+
+.header .searchbar i {
+    font-size: 15px;
+    color: var(--primary);
+}
+
+.header .nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.header .nav-item a {
+    transition: .2s ease-out;
+}
+
+.header .nav-item a:hover {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.header .nav-item .sign-in {
+    display: none;
+}
+
+.header .nav-item .sign-in a {
+    color: var(--black);
+    background: transparent;
+    border: 2px solid var(--black);
+    padding: 5px;
+    transition: .2s ease-out;
+}
+
+.header .nav-item .sign-in a:hover {
+    background: var(--black);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.header .nav-item .user-profile  {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--primary);
+    padding: 2px;
+}
+
+.header .nav-item .user-profile img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.header .header-contents .header-intro  {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header .header-contents .header-intro p{
+    color: var(--grey);
+
+}
+
+.header .header-contents .header-intro .intro-heading {
+    font-size: 45px;
+}
+/* ============================================TRENDING============================================= */
+
+.trending {
+    padding: 0 100px 0 100px;
+    position: relative;
+    z-index: 10;
+    margin-top: -150px;
+}
+
+.trending .swiper .swiper-wrapper {
+    margin-top: 10px;
+}
+.trending .swiper-button-next, .trending .swiper-button-prev {
+    color: var(--primary);
+}
+
+.trending .swiper-wrapper .swiper-slide {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: .2s ease-out;
+    overflow: hidden;
+}
+
+.trending .swiper-wrapper .swiper-slide:hover {
+    background: var(--grey-2);
+}
+
+.trending .swiper-wrapper .swiper-slide img{
+    position: relative;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 210px;
+}
+
+.trending .swiper-wrapper .swiper-slide .album-info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.trending .swiper-wrapper .swiper-slide .album-info p a{
+    color: var(--grey3);
+}
+
+
+/* ============================================FEATURED============================================= */
+
+.featured {
+    padding: 0 100px 0 100px;
+}
+
+.featured a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.featured a:hover {
+    text-decoration: underline;
+}
+
+.featured h4 {
+    margin: 50px 0 10px 0;
+}
+
+
+.featured .blog-posts-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.featured .blog-post {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured .blog-post-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.featured .blog-post-main img {
+    flex: 1 1 50%;
+    height: 470px;
+    object-fit: cover;
+
+}
+
+.featured .blog-post-main .post-info {
+    flex: 1 1 40%;
+    padding: 20px;
+
+}
+
+.featured .blog-post-main .post-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 40px;
+}
+
+.featured .blog-post img {
+    object-fit: cover;
+    height: 190px;
+    width: 100%;
+}
+
+.featured .blog-post .post-info {
+    margin-top: 5px;
+}
+
+.featured .blog-post .post-info h4 {
+    margin: 0 0 10px 0;
+}
+
+
+.featured .see-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .featured .see-more-btn a {
+    color: var(--primary);
+    text-align: center;
+    width: 130px;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid var(--primary);
+    transition: 0.2s ease-out;
+    margin: 20px;
+    
+}
+
+ .featured .see-more-btn a:hover {
+    background: var(--primary);
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+/* ===========================================Latest============================================= */
+
+
+.latest {
+    padding: 0 100px 0 100px;
+    margin-top: 50px;
+}
+
+.latest h4 {
+    margin-bottom: 10px;
+}
+
+.latest .latest-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.latest-container .latest-item {
+    flex: 1 1 40%;
+    padding: 5px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    transition: 0.2s ease-out;
+}
+
+.latest-container .latest-item:hover {
+    background: var(--grey-2);
+}
+
+.latest-container .latest-item img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.latest-container .latest-item .latest-item-info {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.latest .see-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .latest .see-more-btn a {
+    color: var(--primary);
+    text-align: center;
+    width: 130px;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid var(--primary);
+    transition: 0.2s ease-out;
+    margin: 20px;
+    
+}
+
+ .latest .see-more-btn a:hover {
+    background: var(--primary);
+    text-decoration: none;
+    color: var(--black);
+}
+
+.latest-container .latest-item .card {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ============================================POPULAR============================================= */
+
+
+.popular {
+    padding: 0 100px 0 100px;
+    position: relative;
+}
+
+
+.popular .swiper .swiper-wrapper {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.popular .swiper-button-next, .popular .swiper-button-prev {
+    color: var(--primary);
+}
+
+.popular .swiper-wrapper .swiper-slide {
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: .2s ease-out;
+    text-align: center;
+}
+
+.popular .swiper-wrapper .swiper-slide:hover {
+    background: var(--grey-2);
+}
+
+.popular .swiper-wrapper .swiper-slide:hover {
+    background: var(--grey-2);
+}
+
+.popular .swiper-wrapper .swiper-slide img{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    object-fit: cover;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* ============================================FOOTER============================================= */
+
+.footer {
+    height: 300px;
+    background: linear-gradient(to top, rgba(199, 66, 51, 0.5), rgba(251, 0, 0, 0));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer .logo a {
+    font-size: 40px;
+    font-family: serif;
+    color: var(--primary);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.footer .footer-nav .nav-item li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.footer .footer-nav .nav-item li a {
+    transition: .2s ease-out;
+}
+
+.footer .footer-nav .nav-item li a:hover {
+    text-decoration: none;
+    color: var(--grey3);
+
+}
+
+.footer .social-links .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .social-links h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.footer .social-links .links a .uil {
+    font-size: 30px;
+    color: var(--primary);
+    transition: .2s ease-out;
+}
+
+.footer .social-links .links a .uil:hover {
+    color: var(--primary-dark);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    padding: 5px;
+}
+
+.copyright small {
+    font-weight: 300;
+}
+
+/* ============================================artists============================================= */
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 100px 0 100px;
+}
+
+.letters a {
+    border: 1px solid var(--primary);
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.letters a:hover {
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--background);
+}
+
+/* ============================================artists section============================================= */
+.artists {
+    padding: 30px 100px 50px 100px ;
+}
+
+.artists .artist-wrapper .card {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    transition: .1s ease-out;
+}
+
+.artists .artist-wrapper .card:hover {
+    text-decoration: underline;
+
+}
+
+.artists .artist-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+}
+
+.artists .artist-wrapper {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.artists .artist-wrapper:hover {
+    background: var(--grey-2);
+}
+
+.artists .artist-wrapper img {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+}
+
+.artists .artist-wrapper a {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* ============================================artists profile info============================================= */
+
+.artist-profile-info {
+    margin: 0 100px 0 100px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+}
+
+.artist-profile-info .artist-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.artist-profile-info .artist-bg .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(199, 66, 51, 0.5);
+    z-index: 2;
+}
+
+.artist-profile-info .artist-bg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-profile-info .artist-info {
+    position: relative;
+    z-index: 5;
+    margin: 50px 0 0 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.artist-profile-info .artist-info h1 {
+    font-size: 50;
+    font-weight: 400;
+    margin: auto 10px 10px 10px ;
+}
+
+.artist-profile-info .artist-img {
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+}
+
+.artist-profile-info .artist-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.artist-albums {
+    padding: 0 100px 0 100px;
+    position: relative;
+    z-index: 10;
+    margin-top: 100px;
+}
+
+.artist-songs {
+    margin-bottom: 50px ;
+}
+
+/* ============================================song lryics============================================= */
+
+.song-lyrics {
+    margin: 0 100px 0 100px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+}
+
+.song-lyrics .artist-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.song-lyrics .artist-bg .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(199, 66, 51, 0.5);
+    z-index: 2;
+}
+
+.song-lyrics .artist-bg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.song-lyrics .album-info {
+    position: relative;
+    z-index: 5;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.song-lyrics .album-info .song-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding: 10px;
+    gap: 5px;
+}
+
+.song-lyrics .album-info .song-info h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.song-lyrics .album-info .song-info h3 {
+    font-weight: 400;
+}
+
+.song-lyrics .album-img {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 230px;
+    width: 230px;
+}
+
+.lyrics-body {
+    padding: 50px 100px 0 100px;
+}
+
+.lyrics-body .lyrics {
+    margin-left: 150px;
+    width: 100%;
+    word-spacing: 5px;
+    font-weight: 400;
+}
+
+.song-lyrics .album-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-albums {
+    padding: 0 100px 0 100px;
+    position: relative;
+    z-index: 10;
+    margin-top: 100px;
+}
+
+.artist-songs {
+    margin-bottom: 50px ;
+}
+
+/* ============================================Blog Posts============================================= */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px 50px 100px;
+}
+
+.blog-posts .post .post-img {
+    width: 100%;
+    padding: 1px;
+    background: var(--primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blog-posts .post .post-img img {
+    height: 650px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.blog-posts .post .post-info h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 400;
+
+}
+
+.blog-posts .post .post-info p {
+    margin-bottom: 40px;
+}
+
+.blog-posts .post-body__featured {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blog-posts .post-body__featured .post-body {
+    flex: 1 1 65%;
+}
+
+.blog-posts .post-body__featured .post-body p {
+    font-weight: 300;
+    word-spacing: 5px;
+}
+
+.blog-posts .post-body__featured .featured {
+    padding: 0;
+    flex: 1 1 30%;
+
+}
+
+.blog-posts .post-body__featured .featured h3 {
+    font-size: 18px;
+    background: var(--primary);
+    font-weight: 400;
+    padding: 3px;
+    display: inline-flex;
+}
+
+/* ============================================dashboard interface============================================= */
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 100px 50px 100px;
+    gap: 20px;
+}
+
+.dashboard-interface {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 20%;
+    gap: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-out;
+}
+
+.dashboard-interface .user-dashboard__profile a:hover{
+    text-decoration: underline;
+}
+
+
+.dashboard-interface .user-dashboard__profile img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile p {
+    color: var(--grey);
+}
+
+.dashboard-interface .dashboard-ui .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.dashboard-interface .dashboard-ui i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.dashboard .dashboard-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+/* ============================================user dashbioard============================================= */
+
+.dashboard-table table {
+    width: 100%;
+
+}
+
+.dashboard-table h1 {
+    text-align: center;
+}
+
+.dashboard-table thead th {
+    background: var(--primary);
+    padding: 2px;
+    text-align: left;
+    font-weight: 300;
+}
+
+
+.dashboard-table thead .name {
+    width: 80%;
+}
+
+
+
+.dashboard-table tbody td {
+    background: var(--white);
+    padding: 2px;
+    color: var(--grey);
+
+}
+
+.dashboard-table tbody td a {
+    color: var(--grey);
+}
+
+
+/* ============================================user profile info============================================= */
+
+.user-profile-info {
+    margin: 0 100px 0 100px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+}
+
+.user-profile-info .user-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.user-profile-info .user-bg .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(199, 66, 51, 0.5);
+    z-index: 2;
+}
+
+.user-profile-info .user-bg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.user-profile-info .user-info {
+    position: relative;
+    z-index: 5;
+    margin: 50px 0 0 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.user-profile-info .user-info .userName-userPosition {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.user-profile-info .user-info .userName-userPosition h1 {
+    font-size: 50;
+    font-weight: 400;
+    margin-top: auto;
+}
+
+.user-profile-info .user-info .userName-userPosition p {
+    color: var(--grey);
+}
+
+
+
+.user-profile-info .user-img {
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+}
+
+.user-profile-info .user-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* ============================================user bio============================================ */
+
+.user-informations {
+    display: flex;
+    gap: 20px;
+    padding: 100px 100px 0 100px;
+    flex-wrap: wrap;
+}
+
+.user-informations .heading {
+    margin-top: 20px;
+}
+
+.user-info-rankings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.user-more-info {
+    display: flex;
+    background: var(--primary);
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+  
+}
+
+.user-more-info .heading {
+    color: var(--grey);
+}
+
+.user-more-info .profile-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 3px solid var(--primary-dark);
+}
+
+.user-more-info  h6 {
+    font-weight: 300;
+}
+
+.user-more-info .profile-info .user-status {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-more-info .profile-info .user-status .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-more-info .profile-info .user-status .status .indicator {
+    height: 10px;
+    width: 10px;
+    background: limegreen;
+    border-radius: 50%;
+    margin: 0 5px 0 5px;
+}
+
+.user-more-info .profile-info .user-status .status .user-role {
+    margin-left: 5px;
+}
+
+.user-more-info .user-contributions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.user-more-info .user-contributions .contribution-card {
+    border-radius: 5px;
+    transition: .2s ease-out;
+    padding: 5px;
+    border-bottom: 3px solid var(--primary-dark);
+}
+
+.user-more-info .user-contributions .contribution-card a {
+    text-decoration: none;
+}
+
+.user-more-info .user-contributions .contribution-card:hover {
+    background: var(--primary-dark);
+}
+
+
+.user-more-info .user-contributions .contribution-card .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-more-info .user-contributions .contribution-card .icons .uil {
+    font-size: 25px;
+}
+
+.user-more-info .user-contributions .contribution-card p {
+    color: var(--grey);
+}
+
+/* ============================================user rankings============================================ */
+
+.user-rankings table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.user-rankings thead th {
+    background: var(--primary);
+    padding: 2px;
+    text-align: left;
+    font-weight: 300;
+    border: 2px solid var(--background);
+}
+
+
+.user-rankings thead .name {
+    width: 80%;
+}
+
+
+
+.user-rankings tbody td {
+    background: var(--white);
+    padding: 2px;
+    color: var(--grey);
+    border: 2px solid var(--background);
+
+}
+
+.user-rankings .user-name-img a {
+    color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.user-rankings .user-name-img img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/* ============================================user posts============================================ */
+
+.user-posts {
+    flex: 1 1 40%;
+    padding: 0;
+
+}
+
+/* ============================================add post============================================ */
+
+.add-post {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-post h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-post .form-group {
+    margin-bottom: 15px;
+}
+
+.add-post .featured-option {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-post label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-post input[type="text"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-post input[type="checkbox"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+.add-post button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-post button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================add user============================================ */
+
+.add-user {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-user h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-user .form-group {
+    margin-bottom: 10px;
+}
+
+.add-user .featured-option {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-user label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-user input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-user button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-user button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================add song============================================ */
+
+.add-song {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-song h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-song .form-group {
+    margin-bottom: 15px;
+}
+
+.add-song .featured-option {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-song label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-song input[type="text"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-song input[type="checkbox"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+.add-song button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-song button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* ============================================add album============================================ */
+
+.add-album {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-album h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-album .form-group {
+    margin-bottom: 15px;
+}
+
+.add-album .featured-option {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-album label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-album input[type="text"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-album input[type="checkbox"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+.add-album button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-album button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================add artist============================================ */
+
+.add-artist {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-artist .avatar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.add-artist h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-artist .form-group {
+    margin-bottom: 10px;
+}
+
+.add-artist label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.add-artist input[type="text"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-artist button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-artist button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+
+/* ==================================================================================small devices ================================================================ */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 31px;
+    }
+    
+    h2 {
+        font-size: 24px; 
+    }
+    
+    h3 {
+        font-size: 20px; 
+    }
+    
+    h4 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 11px;
+        font-weight: 400;
+    }
+    
+    h6 {
+        font-size: 10px; 
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    /* ============================================HEADER============================================= */
+
+header {
+    margin-bottom: 0px;
+}
+
+.header {
+    height: 10vh;
+    padding-top: 15px;
+}
+
+.header-contents {
+    padding: 0 15px 0 15px;
+}
+
+ .header .navigation .logo a {
+    font-size: 25px;
+}
+
+.header .searchbar {
+    margin: 0 20px 0 20px;
+}
+
+ .header .searchbar input {
+    font-size: 12px;
+}
+
+.header .searchbar i {
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.header .navigation .uil-bars {
+    font-size: 30px;
+    color: var(--primary);
+    display: flex;
+}
+
+.header .nav-item {
+    display: none;
+}
+
+.header .navigation .uil-bars {
+    display: flex;
+}
+
+/* ============================================TRENDING============================================= */
+
+.trending {
+    padding: 0 15px 0 15px;
+    margin-top: 0px;
+    z-index: 0;
+}
+
+.trending .swiper-button-next, .trending .swiper-button-prev {
+    display: flex;
+    
+}
+
+.trending .swiper-wrapper .swiper-slide .album-info {
+    padding: 5px;
+}
+
+.trending .swiper-wrapper .swiper-slide  img {
+    height: 100px;
+}
+
+.trending .swiper-wrapper .swiper-slide .album-info h4 {
+    margin-bottom: 2px;
+}
+
+
+/* ============================================FEATURED============================================= */
+
+.featured {
+    padding: 0 15px 0 15px;
+}
+
+.featured .blog-post-main img {
+    height: 190px;
+    flex: 1 1 100%;
+    object-fit: cover;
+
+}
+
+.featured .blog-post-main .post-info {
+    padding: 0;
+
+}
+
+.featured .blog-post-main .post-info h4 {
+    margin: 0;
+    font-size: 25px;
+    margin: 0 0 10px 0;
+}
+
+.featured .blog-post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.featured .blog-post .post-info h4 {
+    font-size: 25px;
+}
+
+
+/* ============================================LATEST============================================= */
+
+
+.latest {
+    padding: 0 15px 0 15px;
+    margin-top: 20px;
+}
+
+
+.latest-container .latest-item {
+    flex: 1 1 100%;
+}
+
+/* ============================================POPULAR============================================= */
+
+.popular {
+    padding: 0 15px 0 15px;
+}
+
+
+.popular .swiper-wrapper .swiper-slide img{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    object-fit: cover;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.popular .swiper-wrapper .swiper-slide h4 {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/* ============================================FOOTER============================================= */
+
+.footer {
+    height: 250px;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+
+.footer .logo a {
+    font-size: 30px;
+    font-family: serif;
+    color: var(--primary);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.footer .footer-nav .nav-item li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.footer .footer-nav .nav-item li a {
+    transition: .2s ease-out;
+}
+
+.footer .footer-nav .nav-item li a:hover {
+    text-decoration: none;
+    color: var(--grey3);
+
+}
+
+.footer .social-links .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .social-links {
+    width: 100%;
+}
+
+.footer .social-links h4 {
+    margin-bottom: 0px;
+    display: none;
+}
+
+
+.footer .social-links .links a .uil {
+    font-size: 20px;
+    letter-spacing: 30px;
+    text-align: center;
+
+}
+
+.footer .social-links .links a .uil:hover {
+    color: var(--primary-dark);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    padding: 5px;
+}
+
+.copyright small {
+    font-weight: 300;
+}
+
+/* ============================================artists============================================= */
+
+.letters {
+    padding: 20px 15px 0 15px;
+}
+
+.letters a {
+    padding: 3px;
+    height: 25px;
+    width: 25px;
+}
+
+/* ============================================artists section============================================= */
+.artists {
+    padding: 30px 15px 50px 15px ;
+}
+
+.artists .artist-wrapper:hover {
+    background: var(--grey-2);
+}
+
+.artists .artist-wrapper img {
+    height: 45px;
+    width: 45px;
+}
+
+.artists .artist-wrapper a {
+    font-size: 12px;
+}
+
+/* ============================================artists profile info============================================= */
+
+.artist-profile-info {
+    margin: 0 15px 0 15px;
+    height: 100px;
+}
+
+.artist-profile-info .artist-info {
+    margin: 30px 0 0 10px;
+}
+
+.artist-profile-info .artist-info h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.artist-profile-info .artist-img {
+    padding: 2px;
+    height: 100px;
+    width: 100px;  
+}
+
+
+.artist-songs {
+    margin-bottom: 50px;
+}
+
+
+/* ============================================song lryics============================================= */
+
+.song-lyrics {
+    margin: 0 15px 0 15px;
+    height: 100px;
+}
+
+
+.song-lyrics .album-info {
+    z-index: 5;
+    margin: 5px 5px 5px 5px;
+}
+
+.song-lyrics .album-info .song-info {
+    padding: 5px;
+    gap: 5px;
+}
+
+.song-lyrics .album-info .song-info h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.song-lyrics .album-info .song-info h3 {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.song-lyrics .album-img {
+    height: 90px;
+    width: 90px;
+}
+
+.lyrics-body {
+    padding: 20px 0 0 15px;
+}
+
+.lyrics-body .lyrics {
+    margin-left: 0;
+    width: 100%;
+    word-spacing: 5px;
+    font-weight: 400;
+}
+
+.artist-albums {
+    padding: 0 15px 0 15px;
+    margin-top: 50px;
+}
+
+.artist-songs {
+    margin-bottom: 50px ;
+}
+
+/* ============================================Blog Posts============================================= */
+.blog-posts {
+    padding: 20px 15px 20px 15px;
+}
+
+.blog-posts .post .post-img {
+    margin-bottom: 10px;
+}
+
+.blog-posts .post .post-img img {
+    height: 650px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.blog-posts .post .post-info h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 400;
+
+}
+
+.blog-posts .post .post-info p {
+    margin-bottom: 20px;
+}
+
+.blog-posts .post-body__featured {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blog-posts .post-body__featured .post-body {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+}
+
+.blog-posts .post-body__featured .post-body p {
+    font-weight: 400;
+    font-size: 17px;
+    word-spacing: 2px;
+}
+
+.blog-posts .post-body__featured .featured {
+    flex: 1 1 100%;
+}
+
+/* ============================================dashboard interface============================================= */
+.dashboard {
+    padding: 20px 15px 50px 15px;
+    gap: 5px;
+}
+
+.dashboard-interface {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 10%;
+    gap: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile {
+    padding: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile img {
+    height: 40px;
+    width: 40px;
+}
+
+.dashboard-interface .dashboard-ui .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    background: var(--primary);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.dashboard-interface .dashboard-ui i {
+    font-size: 20px;
+    margin-right: 0px;
+}
+
+.dashboard-interface .dashboard-ui p {
+    display: none;
+}
+
+.dashboard .dashboard-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ============================================user dashboard============================================= */
+
+.dashboard-table table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 5px 0 0 0;
+    font-size: 12px; 
+}
+
+.dashboard-table thead th {
+    background: var(--primary);
+    color: white;
+    padding: 5px; 
+    text-align: left;
+    border-radius: 0;
+    border: 1px solid var(--primary-dark) ;
+    font-size: 15px;
+}
+
+.dashboard-table thead .name {
+    width: 80%;
+}
+
+.dashboard-table tbody td {
+    border: 1px solid var(--grey);
+    padding: 5px;
+    background: var(--white);
+    color: var(--grey3);
+}
+
+.dashboard-table tbody td a {
+    color: var(--grey3);
+}
+
+/* ============================================user profile info============================================= */
+
+.user-profile-info {
+    margin: 0 15px 0 15px;
+    height: 100px;
+}
+
+.user-profile-info .user-info {
+    margin: 30px 0 0 10px;
+}
+
+.user-profile-info .user-info h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.user-profile-info .user-img {
+    padding: 2px;
+    height: 100px;
+    width: 100px;  
+}
+
+.user-profile-info .user-info .userName-userPosition {
+    padding: 5px;
+}
+
+/* ============================================user bio============================================ */
+
+.user-informations {
+    flex-direction: column;
+    padding: 50px 15px 0 15px;
+}
+
+.user-info-rankings {
+    gap: 20px;
+}
+
+.user-more-info {
+    padding: 5px;
+    flex: 0 0 0%;
+}
+
+.user-more-info .user-contributions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+/* ============================================user rankings============================================ */
+
+.user-rankings table {
+    width: 100%;
+
+}
+
+.user-rankings thead th {
+    background: var(--primary);
+    padding: 2px;
+    text-align: left;
+    font-weight: 300;
+    border: 0;
+}
+
+
+.user-rankings thead .name {
+    width: 80%;
+}
+
+.user-rankings tbody td {
+    background: var(--white);
+    padding: 2px;
+    color: var(--grey);
+    border: 0;
+}
+
+.user-rankings .user-name-img a {
+    color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.user-rankings .user-name-img img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/* ============================================user posts============================================ */
+
+.user-posts {
+    flex: 1 1 0%;
+    padding: 0;
+
+}
+
+
+/* ============================================add post============================================ */
+
+.add-post {
+    padding: 10px;
+}
+
+.add-post h1 {
+    margin-bottom: 10px;
+}
+
+.add-post .form-group {
+    margin-bottom: 10px;
+}
+
+.add-post input[type="text"],
+textarea,
+input[type="file"],
+button {
+    padding: 5px;
+}
+
+.add-post input[type="checkbox"] {
+    width: auto;
+    margin-left: 5px;
+}
+
+/* ============================================add user============================================ */
+
+.add-user {
+    padding: 10px;
+}
+
+.add-user h1 {
+    margin-bottom: 10px;
+}
+
+.add-user .form-group {
+    margin-bottom: 5px;
+}
+
+.add-user .featured-option {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-user label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-user input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-user button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-user button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================add song============================================ */
+
+.add-song {
+    padding: 10px;
+}
+
+.add-song h1 {
+    margin-bottom: 10px;
+}
+
+.add-song .form-group {
+    margin-bottom: 10px;
+}
+
+.add-song .featured-option {
+    margin-bottom: 0;
+}
+
+
+.add-song input[type="checkbox"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+.add-song button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:  0.2s ease-out;
+}
+
+.add-song button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================add album============================================ */
+
+.add-album {
+    padding: 10px;
+}
+
+.add-album h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-album label {
+    margin-bottom: 0;
+}
+
+.add-album .form-group {
+    margin-bottom: 15px;
+}
+
+
+.add-album input[type="text"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-album input[type="checkbox"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+
+/* ============================================add artist============================================ */
+
+.add-artist {
+    padding: 10px;
+}
+
+.add-artist .avatar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-artist h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-artist .form-group {
+    margin-bottom: 10px;
+}
+
+.add-artist label {
+    margin-bottom: 0;
+}
+
+.add-artist input[type="text"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+} 
+
+/* ==================================================================================medium devices ================================================================ */
+
+
+@media (min-width: 479px) and (max-width:768px) {
+    
+    /* ============================================HEADER============================================= */
+    header {
+        margin-bottom: 0px;
+    }
+    
+    .header {
+        background-image: url(/assets/header.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 15vh;
+        position: relative;
+        z-index: 5;
+        padding-top: 30px;
+    }
+    
+    .header .sidebar {
+        height: 100vh;
+        width: 30%;
+    }
+
+    .header .searchbar {
+        margin: 0 20px 0 20px;
+    }
+    
+    
+    .header .navigation .uil-bars {
+        font-size: 40px;
+        color: var(--primary);
+        display: flex;
+    }
+    
+    .header-contents {
+        padding: 0 30px 0 30px;
+    }
+    
+    .header .nav-item {
+        display: none;
+    }
+
+    /* ============================================TRENDING============================================= */
+    
+    .trending {
+        padding: 0 30px 0 30px;
+        position: relative;
+        z-index: 0;
+        margin-top: 0;
+    }
+    
+    .trending .swiper-button-next, .trending .swiper-button-prev {
+        display: none;
+    }
+    
+    .trending .swiper-wrapper .swiper-slide img{
+        height: 130px;
+    }
+    
+    .trending .swiper-wrapper .swiper-slide .album-info {
+        padding: 5px;
+    }
+        
+    /* ============================================FEATURED============================================= */
+    
+    .featured {
+        padding: 0 30px 0 30px;
+    }
+
+
+    
+    .featured .blog-posts-container .blog-post {
+        flex: 1 1 40%;
+    }
+        
+    .featured .blog-post-main .post-info {
+        margin-top: 20px;
+        padding: 0;
+    }
+    
+    .featured .blog-post-main .post-info h4 {
+        margin: 0 0 20px 0;
+    }
+    
+    .featured .blog-post .post-info h4 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .featured .see-more-btn {
+       margin-top: 30PX;
+    }
+        
+    /* ============================================LATEST============================================= */
+    
+    
+    .latest {
+        padding: 0 30px 0 30px;
+        margin-top: 20px;
+    }
+    
+    .latest .latest-container {
+        margin-bottom: 20PX;
+    }
+    
+    /* ============================================POPULAR============================================= */
+    
+    .popular {
+        padding: 0 30px 0 30px;
+        position: relative;
+    }
+    
+    
+    .popular .swiper .swiper-wrapper {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .popular .swiper-button-next, .popular .swiper-button-prev {
+        display: none;
+    }
+    
+    .popular .swiper-wrapper .swiper-slide {
+        height: 100%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: .2s ease-out;
+    }
+    
+    .popular .swiper-wrapper .swiper-slide:hover {
+        background: var(--grey-2);
+    }
+    
+    .popular .swiper-wrapper .swiper-slide:hover {
+        background: var(--grey-2);
+    }
+    
+    .popular .swiper-wrapper .swiper-slide img{
+        height: 100px;
+        width: 100px;
+        position: relative;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    .popular .swiper-wrapper .swiper-slide img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    /* ============================================FOOTER============================================= */
+    
+    .footer {
+        height: 300px;
+        background: linear-gradient(to top, rgba(199, 66, 51, 0.5), rgba(251, 0, 0, 0));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    
+    .footer .logo a {
+        font-size: 40px;
+        font-family: serif;
+        color: var(--primary);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+    }
+    
+    .footer .footer-nav .nav-item li {
+        margin-bottom: 10px;
+        list-style-type: none;
+    }
+    
+    .footer .footer-nav .nav-item li a {
+        transition: .2s ease-out;
+    }
+    
+    .footer .footer-nav .nav-item li a:hover {
+        text-decoration: none;
+        color: var(--grey3);
+    
+    }
+    
+    .footer .social-links .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .footer .social-links h4 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    
+    .footer .social-links .links a .uil {
+        font-size: 30px;
+        color: var(--primary);
+        transition: .2s ease-out;
+    }
+    
+    .footer .social-links .links a .uil:hover {
+        color: var(--primary-dark);
+    }
+    
+    .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--primary);
+        padding: 5px;
+    }
+    
+    .copyright small {
+        font-weight: 300;
+    }
+    /* ============================================artists============================================= */
+
+.letters {
+    padding: 20px 30px 0 30px;
+}
+
+.letters a {
+    padding: 3px;
+    height: 25px;
+    width: 25px;
+}
+
+/* ============================================artists section============================================= */
+.artists {
+    padding: 30px 30px 50px 30px ;
+}
+
+.artists .artist-wrapper {
+    padding: 5px;
+}
+.artists .artist-wrapper:hover {
+    background: var(--grey-2);
+}
+
+.artists .artist-wrapper img {
+    height: 75px;
+    width: 75px;
+}
+
+.artists .artist-wrapper a {
+    font-size: 12px;
+}
+
+/* ============================================artists profile info============================================= */
+
+.artist-profile-info {
+    margin: 0 30px 0 30px;
+    height: 140px;
+}
+
+.artist-profile-info .artist-info {
+    margin: 30px 0 0 10px;
+}
+
+.artist-profile-info .artist-info h1 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.artist-profile-info .artist-img {
+    padding: 2px;
+    height: 140px;
+    width: 140px;  
+}
+
+.artist-albums {
+    padding: 0 30px 0 30px;
+    margin-top: 50px;
+}
+
+.artist-songs {
+    margin-bottom: 50px ;
+}
+
+/* ============================================song lryics============================================= */
+
+.song-lyrics {
+    margin: 0 30px 0 30px;
+    height: 140px;
+}
+
+
+.song-lyrics .album-info {
+    z-index: 5;
+    margin: 10px 10px 10px 10px;
+}
+
+.song-lyrics .album-info .song-info {
+    padding: 5px;
+    gap: 5px;
+}
+
+.song-lyrics .album-info .song-info h1 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.song-lyrics .album-info .song-info h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.song-lyrics .album-img {
+    height: 120px;
+    width: 120px;
+}
+
+.lyrics-body {
+    padding: 30px 0 50px 100px;
+}
+
+.lyrics-body .lyrics {
+    margin-left: 0;
+    width: 100%;
+    word-spacing: 5px;
+    font-weight: 400;
+}
+
+/* ============================================Blog Posts============================================= */
+.blog-posts {
+    padding: 20px 30px 20px 30px;
+}
+
+.blog-posts .post .post-img {
+    margin-bottom: 10px;
+}
+
+.blog-posts .post .post-img img {
+    height: 650px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.blog-posts .post .post-info h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 400;
+
+}
+
+.blog-posts .post .post-info p {
+    margin-bottom: 20px;
+}
+
+.blog-posts .post-body__featured {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blog-posts .post-body__featured .post-body {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+}
+
+.blog-posts .post-body__featured .post-body p {
+    font-weight: 400;
+    font-size: 30px;
+    word-spacing: 2px;
+}
+
+.blog-posts .post-body__featured .featured {
+    flex: 1 1 100%;
+}
+
+/* ============================================dashboard interface============================================= */
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 30px 30px 30px;
+    gap: 20px;
+}
+
+.dashboard-interface {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 20%;
+    gap: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.dashboard-interface .user-dashboard__profile p {
+    color: var(--grey);
+}
+
+.dashboard-interface .dashboard-ui .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+
+.dashboard-interface .dashboard-ui i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.dashboard .dashboard-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+/* ============================================user dashbioard============================================= */
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 10px 0 0 0;
+    font-size: 16px; 
+}
+
+thead th {
+    background: var(--primary);
+    color: white;
+    padding: 10px; 
+    text-align: left;
+    border-radius: 5px;
+    border: 5px solid rgba(0, 0, 0, 1) ;
+}
+
+thead .name {
+    width: 80%;
+}
+
+tbody td {
+    border: 1px solid #ddd; /* Cell border */
+    padding: 5px; /* Padding for body cells */
+    border: 5px solid rgba(0, 0, 0, 1);
+    background: var(--white);
+    color: var(--grey3);
+}
+
+tbody td a {
+    color: var(--grey3);
+}
+
+tbody tr:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+
+/* ============================================artists profile info============================================= */
+
+.user-profile-info {
+    margin: 0 30px 0 30px;
+    height: 140px;
+}
+
+.user-profile-info .user-info {
+    margin: 30px 0 0 10px;
+}
+
+.user-profile-info .user-info h1 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.user-profile-info .user-img {
+    padding: 2px;
+    height: 140px;
+    width: 140px;  
+}
+
+/* ============================================user bio============================================ */
+
+.user-informations {
+    flex-direction: column;
+    padding: 50px 30px 0 30px;
+}
+
+.user-info-rankings {
+    gap: 20px;
+}
+
+.user-more-info {
+    padding: 5px;
+    flex: 0 0 0%;
+}
+
+.user-more-info .user-contributions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+/* ============================================user rankings============================================ */
+
+.user-rankings table {
+    width: 100%;
+
+}
+
+.user-rankings thead th {
+    background: var(--primary);
+    padding: 2px;
+    text-align: left;
+    font-weight: 300;
+}
+
+
+.user-rankings thead .name {
+    width: 80%;
+}
+
+
+
+.user-rankings tbody td {
+    background: var(--white);
+    padding: 2px;
+    color: var(--grey);
+
+}
+
+.user-rankings .user-name-img a {
+    color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.user-rankings .user-name-img img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/* ============================================user posts============================================ */
+
+.user-posts {
+    flex: 1 1 0%;
+    padding: 0;
+
+}
+
+}
+
+
+
